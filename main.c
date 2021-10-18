@@ -17,7 +17,7 @@
 
 void gnl(char* line)
 {
-	printf("%s\n", line);
+	printf("%s", line);
 }
 
 int	main (void)
