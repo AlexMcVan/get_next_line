@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: amarie-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/18 14:06:02 by alex              #+#    #+#             */
-/*   Updated: 2021/10/18 14:08:12 by alex             ###   ########.fr       */
+/*   Created: 2021/10/19 11:21:51 by amarie-c          #+#    #+#             */
+/*   Updated: 2021/10/19 11:24:19 by amarie-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <stdlib.h>
 # include <unistd.h>

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: amarie-c <amarie-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 14:09:05 by alex              #+#    #+#             */
-/*   Updated: 2021/10/18 19:46:41 by alex             ###   ########.fr       */
+/*   Updated: 2021/10/19 11:55:59 by amarie-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ char	*maj_result(char *result)
 	return (new_result);
 }
 
-int		ft_read(char *buffer, int fd)
+int	ft_read(char *buffer, int fd)
 {
 	int		readed;
 	char	**ptr;
 
-	ptr = &buffer;	
+	ptr = &buffer;
 	readed = read(fd, *ptr, BUFFER_SIZE);
 	if (readed > 0)
 		(*ptr)[readed] = '\0';
@@ -81,9 +81,7 @@ char	*get_next_line(int fd)
 	}
 	if (!(*buffer) && readed == 0)
 		result = ft_strndup(next_line, ft_strchr(next_line, '\0'));
+	free(next_line);
 	next_line = maj_next_line(result);
-	if (next_line == NULL)
-		free(next_line);
-	result = maj_result(result);
-	return (result);
+	return (maj_result(result));
 }
