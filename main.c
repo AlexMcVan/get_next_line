@@ -12,25 +12,22 @@
 
 #include "get_next_line.h"
 #include <stdio.h>
+#include <unistd.h>
 // gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line.h get_next_line_utils.c
-
-void gnl(char* line)
-{
-	printf("%s", line);
-}
 
 int	main (void)
 {
-
+	char	*line;
 	
 	int fd = open("essi.txt", O_RDONLY);
-	gnl(get_next_line(fd));
-	gnl(get_next_line(fd));
-	gnl(get_next_line(fd));
-	gnl(get_next_line(fd));
-	gnl(get_next_line(fd));
 	
-
-
+	line = get_next_line(fd);
+	printf("%s", line);
+	while (line)
+	{
+		line = get_next_line(fd);
+		printf("%s", line);
+	}
+	close(fd);
 	return (0);
 }
