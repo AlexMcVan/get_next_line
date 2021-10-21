@@ -68,7 +68,7 @@ char	*get_next_line(int fd)
 	char		*result;
 
 	buffer[BUFFER_SIZE] = '\0';
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd == NULL || BUFFER_SIZE <= 0)
 		return (NULL);
 	readed = -2;
 	result = ft_strndup(next_line, ft_strchr(next_line, '\0'));
