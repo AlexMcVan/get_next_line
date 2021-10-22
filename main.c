@@ -15,11 +15,12 @@
 #include <unistd.h>
 // gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line.h get_next_line_utils.c
 
-int	main (void)
+int	main (int argc, char **argv)
 {
 	char	*line;
 	
-	int fd = open("essi.txt", O_RDONLY);
+	int fd = open(argv[1], O_RDONLY);
+//pour stdin :fd = 1
 	
 	line = get_next_line(fd);
 	printf("%s", line);
