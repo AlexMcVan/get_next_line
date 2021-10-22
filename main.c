@@ -17,18 +17,23 @@
 
 int	main (int argc, char **argv)
 {
-	char	*line;
-	
+	(void) argc;
 	int fd = open(argv[1], O_RDONLY);
-//pour stdin :fd = 1
-	
-	line = get_next_line(fd);
+//for  stdin : fd = 1
+	//following comments for fd bonus
+	//int fd2 = open(argv[2], O_RDONLY);
+	char *line = get_next_line(fd);
+	//char *line2 = get_next_line(fd2);
 	printf("%s", line);
-	while (line)
+	//printf("%s", line2);
+	while (line /* && line2*/)
 	{
 		line = get_next_line(fd);
+		//line2 = get_next_line(fd2);
 		printf("%s", line);
+		//printf("%s", line2);
 	}
 	close(fd);
+	//close(fd2);
 	return (0);
 }
