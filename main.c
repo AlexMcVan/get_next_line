@@ -13,7 +13,7 @@
 #include "get_next_line.h"
 #include <stdio.h>
 #include <unistd.h>
-// gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line.h get_next_line_utils.c
+// gcc -Wall -Wextra -Werror main.c get_next_line.c get_next_line.h get_next_line_utils.c -D BUFFER_SIZE=42
 
 int	main (int argc, char **argv)
 {
